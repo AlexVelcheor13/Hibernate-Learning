@@ -15,13 +15,13 @@ public class HibernateApplication {
                 .buildSessionFactory();//метод который строит фабрику сеесий
 
         try {
-            Session session = factory.getCurrentSession();
+            Session session = factory.getCurrentSession(); // session это обертка вокруг подкл-я к БД
 
-            Employee employee = new Employee("Денис", "Сябрик", "Таможня", 123321);
+            Employee employee = new Employee("Денис", "Gaw", "Таможня", 123321);
 
             session.beginTransaction();
-            //session.save(employee);
-            //session.getTransaction().commit();
+            session.save(employee);
+            session.getTransaction().commit();
 
             System.out.println("Done!");
             System.out.println(employee);

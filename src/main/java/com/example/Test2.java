@@ -15,15 +15,14 @@ public class Test2 {
                 .buildSessionFactory();//метод который строит фабрику сеесий
 
         try {
-
             //получаем объект из БД по id
             Session session = factory.getCurrentSession();
 
-            Employee employee = new Employee("Oleg", "Dubov", "sales", 222);
+            Employee employee = new Employee("Yuri", "Dred", "pr", 1031);
 
             session.beginTransaction();
             session.save(employee);
-           // session.getTransaction().commit();// закрываем ранзакцию
+//            session.getTransaction().commit();// закрываем ранзакцию
 
             int myId = employee.getId();
 //            session = factory.getCurrentSession();

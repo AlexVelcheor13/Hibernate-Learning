@@ -21,9 +21,9 @@ public class Test4 {
 
             Session session = factory.getCurrentSession();
             session.beginTransaction();
-//            Employee employee = session.get(Employee.class, 1);
-//            employee.setSalary(1500);
-            session.createQuery("update Employee set salary = 999 where name = 'Alex'")
+            Employee employee = session.get(Employee.class, 13);
+            employee.setSalary(1500);
+            session.createQuery("update Employee set salary = 1411 where name = 'Денис'")
                     .executeUpdate();//запускаем с помощью этого метода
 
 

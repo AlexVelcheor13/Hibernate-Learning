@@ -17,8 +17,6 @@ public class Test3 {
                 .buildSessionFactory();//метод который строит фабрику сеесий
 
         try {
-
-
             Session session = factory.getCurrentSession();
             session.beginTransaction();
 //получаем всех работников
@@ -28,7 +26,7 @@ public class Test3 {
             List<Employee> employees = session.createQuery("from Employee where name = 'Alex' AND salary>499")
                     .getResultList();
             for (Employee e: employees){
-                e.setSalary(1001);
+//                e.setSalary(1001);
                 System.out.println(e);
             }
 
