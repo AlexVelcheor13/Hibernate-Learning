@@ -1,7 +1,6 @@
-package hibernate_test2;
+package hibernate_one_to_one;
 
-import hibernate_test2.entity.Detail;
-import hibernate_test2.entity.Employee;
+import hibernate_one_to_one.entity.Detail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -10,7 +9,7 @@ public class Test2 {
 
     public static void main(String[] args) {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(hibernate_test2.entity.Employee.class)
+                .addAnnotatedClass(hibernate_one_to_one.entity.Employee.class)
                 .addAnnotatedClass(Detail.class)
                 .buildSessionFactory();
 

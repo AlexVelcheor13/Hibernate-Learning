@@ -1,8 +1,8 @@
-package hibernate_test2;
+package hibernate_one_to_one;
 
 
-import hibernate_test2.entity.Detail;
-import hibernate_test2.entity.Employee;
+import hibernate_one_to_one.entity.Detail;
+import hibernate_one_to_one.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,7 +13,7 @@ public class HibernateApplication {
 
     public static void main(String[] args) {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
-                                                    .addAnnotatedClass(hibernate_test2.entity.Employee.class)// указываем класс котор имеет спец аннотации для работы с бд
+                                                    .addAnnotatedClass(hibernate_one_to_one.entity.Employee.class)// указываем класс котор имеет спец аннотации для работы с бд
                                                     .addAnnotatedClass(Detail.class)
                                                     .buildSessionFactory();//метод который строит фабрику сеесий
 
