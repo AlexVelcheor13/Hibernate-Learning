@@ -21,25 +21,35 @@ public class HibernateApplication {
 
         try {
             session = factory.getCurrentSession(); // session это обертка вокруг подкл-я к БД
-//            Department department = new Department("IT", 333, 1233);
-//            Employee employee1 = new Employee("Zaur", "Tregulov", 444);
-//            Employee employee2 = new Employee("Oleg", "Turov", 1222);
+//            Department department = new Department("Sales", 555, 5555);
+//            Employee employee1 = new Employee("Zaur", "Tregulov", 555);
+//            Employee employee2 = new Employee("Ivan", "Ivanov", 1000);
+//            Employee employee3 = new Employee("Alex", "Dunduk", 5555);
 //
 //            department.addEmployeeToDepartment(employee1);
 //            department.addEmployeeToDepartment(employee2);
+//            department.addEmployeeToDepartment(employee3);
 
             session.beginTransaction();
 //            session.save(department);
 
-//            Department department = session.get(Department.class, 1);
-//            System.out.println(department);
+            System.out.println("Get department");
+            Department department = session.get(Department.class, 4);
+
+            System.out.println("Show department");
+            System.out.println(department);
+
+//            System.out.println("Show employees of the department");
 //            System.out.println(department.getEmps());
 
-            Employee employee = session.get(Employee.class, 3);
+//            Employee employee = session.get(Employee.class, 3);
 //            System.out.println(employee.getDepartment());
-            session.delete(employee);
+//            session.delete(employee);
 
             session.getTransaction().commit();
+
+//            System.out.println("Show employees of the department");
+//            System.out.println(department.getEmps());
 
             System.out.println("Done!");
 
